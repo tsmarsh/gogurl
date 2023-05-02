@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+    div(class="container-fluid")
+        div(class="row")
+            div(class="panel panel-default")
+                div(class="panel-heading")
+                    h1(class="panel-title") URL Shortener
+                div(class="panel-body")
+                    form(action="/shorten" method="post" class="form-inline")
+                        div(class="form-group mx-2")
+                            label(for="url") URL:
+                            input(type="text" class="form-control" id="url" name="url" required)
+                        div(class="form-group mx-2")
+                            label(for="short_id" ) Custom Short ID (optional):
+                            input(type="text" class="form-control" id="short_id" name="short_id")
+                        input(type="submit" value="Shorten" class="btn btn-primary")
